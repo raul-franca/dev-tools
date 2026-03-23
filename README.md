@@ -10,4 +10,5 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Git.md](Git.md) | Controle de versão: branches, commits, rebase, stash, tags |
 | [Docker.md](Docker.md) | Containers: run, build, Compose, volumes, redes, limpeza |
 | [MySQL.md](MySQL.md) | Bancos de dados: conexão, CRUD, usuários, índices, backup |
+| [ClaudeCode.md](ClaudeCode.md) | Claude Code CLI: comandos slash, atalhos, permissões, hooks, CLAUDE.md |
 | [Terminal.md](terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
