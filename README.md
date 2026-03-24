@@ -7,6 +7,7 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | Cheatsheet | Descrição |
 |---|---|
 | [Homebrew.md](Homebrew.md) | Gerenciador de pacotes do macOS: instalação, serviços, ferramentas de backend |
+| [Maven.md](Maven.md) | Build Java: lifecycle, dependências, profiles, multi-módulo, wrapper |
 | [Git.md](Git.md) | Controle de versão: branches, commits, rebase, stash, tags |
 | [Docker.md](Docker.md) | Containers: run, build, Compose, volumes, redes, limpeza |
 | [MySQL.md](MySQL.md) | Bancos de dados: conexão, CRUD, usuários, índices, backup |
