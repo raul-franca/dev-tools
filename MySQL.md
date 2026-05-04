@@ -6,6 +6,7 @@ Referência de comandos MySQL para desenvolvimento backend no macOS.
 
 ---
 
+
 ## 1. Conexão
 
 ```bash

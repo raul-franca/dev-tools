@@ -2,18 +2,25 @@
 
 ## Project Overview
 
-This is a documentation repository containing Homebrew cheatsheets for macOS development environment setup. All content is written in Portuguese.
+This is a documentation repository containing cheatsheets for backend development on macOS. All content is written in Portuguese.
 
 ## Repository Structure
 
 ```
 dev-tools/
-├── README.md       # Index linking to cheatsheets
-├── Homebrew.md     # Comprehensive Homebrew command reference
-├── Git.md          # Git commands reference
-├── Docker.md       # Docker and Docker Compose reference
-├── terminal.md     # Terminal, network, SSH, and shell reference
-└── CLAUDE.md       # This file
+├── README.md         # Index linking to all cheatsheets
+├── Homebrew.md       # Homebrew package manager reference
+├── Git.md            # Git version control reference
+├── Docker.md         # Docker and Docker Compose reference
+├── MySQL.md          # MySQL database reference
+├── Maven.md          # Maven build tool reference (Java)
+├── Nginx.md          # Nginx web server and reverse proxy reference
+├── ClaudeCode.md     # Claude Code CLI reference
+├── Makefile.md       # Makefile automation reference
+├── Markdown.md       # Markdown syntax reference (CommonMark + GFM)
+├── Mermaid.md        # Mermaid diagram reference
+├── terminal.md       # Terminal, network, SSH, and shell reference
+└── CLAUDE.md         # This file
 ```
 
 ## Content
@@ -36,6 +43,64 @@ dev-tools/
 - Docker Compose with a full backend example (app + PostgreSQL + Redis)
 - Volumes, networks, registry, and cleanup
 
+**MySQL.md** — A cheatsheet covering:
+- Connection commands (local and remote)
+- Database and table management (DDL)
+- CRUD operations: SELECT, INSERT, UPDATE, DELETE
+- Users, permissions, indexes, transactions, backup/restore, diagnostics
+
+**Maven.md** — A cheatsheet covering:
+- Build lifecycle (validate → compile → test → package → verify → install → deploy)
+- Common flags (-DskipTests, -pl, -am, -T, -U)
+- Dependency management and analysis
+- Profiles, multi-module projects, versioning, Maven Wrapper (mvnw)
+- pom.xml structure and dependency scopes
+
+**Nginx.md** — A cheatsheet covering:
+- Essential commands (macOS/Homebrew and Linux/systemd)
+- Configuration paths (macOS vs Linux)
+- nginx.conf structure
+- Common configs: static files, reverse proxy, SPA, HTTPS/SSL, load balancer
+- Location routing and priority, security headers, logs
+- Step-by-step setup for macOS (dev) and Linux (production with Let's Encrypt)
+
+**ClaudeCode.md** — A cheatsheet covering:
+- CLI flags (model, effort, permissions, headless/scripting options)
+- Slash commands (session, code review, model config, automation)
+- Keyboard shortcuts
+- Permission modes
+- settings.json configuration and permission syntax
+- CLAUDE.md project instructions
+- Hooks (events, exit codes, examples)
+- Headless mode for scripts and CI
+- Authentication and available models
+
+**Makefile.md** — A cheatsheet covering:
+- Rule structure (targets, dependencies, commands)
+- .PHONY targets, variables (=, :=, ?=), shell execution
+- Suppressing output (@), ignoring errors (-), multiline commands
+- Conditionals (ifeq/else/endif)
+- Auto-generated help target
+- Full real-world examples: Java/Spring Boot and Node.js projects
+
+**Markdown.md** — A cheatsheet covering:
+- Headings, text formatting (bold, italic, strikethrough, code)
+- Lists (unordered, ordered, task lists)
+- Links, images, code blocks with syntax highlighting
+- Tables with alignment, horizontal rules, line breaks
+- HTML inline, escape characters, footnotes
+- GitHub Flavored Markdown: alerts/callouts (NOTE, TIP, WARNING, CAUTION), emojis
+- Best practices
+
+**Mermaid.md** — A cheatsheet covering:
+- Flowchart (directions, node shapes, arrow types, subgraphs)
+- Sequence diagram (participants, arrow types, loops, alt/else)
+- Class diagram (UML relationships, visibility modifiers)
+- Entity-Relationship (ER) diagram with cardinalities
+- State diagram, Gantt chart, pie chart, user journey
+- Mindmap and Timeline
+- Themes, node styles, and usage tips (GitHub, VS Code, CLI, playground)
+
 **terminal.md** — A cheatsheet covering:
 - Network inspection and port management
 - Process management
@@ -54,6 +119,7 @@ dev-tools/
 **Adding a new cheatsheet:**
 1. Create a new `.md` file in the root directory
 2. Add a link to it in `README.md`
+3. Add an entry to this file under Repository Structure and Content
 
 **Editing existing docs:**
 - Edit the relevant `.md` file directly
