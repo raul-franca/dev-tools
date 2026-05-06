@@ -17,6 +17,7 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Makefile.md](Makefile.md) | Automação de tarefas: regras, variáveis, dependências, exemplos Java e Node |
 | [Markdown.md](Markdown.md) | Sintaxe Markdown: títulos, listas, tabelas, código, alertas, GFM |
 | [Mermaid.md](Mermaid.md) | Diagramas em Markdown: fluxogramas, sequência, ER, classes, Gantt, estados |
+| [BPMN.md](BPMN.md) | Mapas de processo BPMN 2.0: elementos, gateways, pools, passo a passo, exemplos |
 | [Colab.md](Colab.md) | Google Colab + Pandas: carregar CSV, limpeza, agrupamento, gráficos, exportar |
 | [SSH.md](SSH.md) | Conexão, chaves, config, tunelamento, SCP, SFTP, ProxyJump, troubleshooting |
 | [Terminal.md](terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
