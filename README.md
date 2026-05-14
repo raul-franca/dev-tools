@@ -21,3 +21,4 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Colab.md](Colab.md) | Google Colab + Pandas: carregar CSV, limpeza, agrupamento, gráficos, exportar |
 | [SSH.md](SSH.md) | Conexão, chaves, config, tunelamento, SCP, SFTP, ProxyJump, troubleshooting |
 | [Terminal.md](terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
+| [banco de dados/](banco%20de%20dados/) | Estudos e consultas SQL: notas e exemplos de SELECT |
