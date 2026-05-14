@@ -8,19 +8,23 @@ This is a documentation repository containing cheatsheets for backend developmen
 
 ```
 dev-tools/
-├── README.md         # Index linking to all cheatsheets
-├── Homebrew.md       # Homebrew package manager reference
-├── Git.md            # Git version control reference
-├── Docker.md         # Docker and Docker Compose reference
-├── MySQL.md          # MySQL database reference
-├── Maven.md          # Maven build tool reference (Java)
-├── Nginx.md          # Nginx web server and reverse proxy reference
-├── ClaudeCode.md     # Claude Code CLI reference
-├── Makefile.md       # Makefile automation reference
-├── Markdown.md       # Markdown syntax reference (CommonMark + GFM)
-├── Mermaid.md        # Mermaid diagram reference
-├── terminal.md       # Terminal, network, SSH, and shell reference
-└── CLAUDE.md         # This file
+├── README.md               # Index linking to all cheatsheets
+├── Homebrew.md             # Homebrew package manager reference
+├── Git.md                  # Git version control reference
+├── Docker.md               # Docker and Docker Compose reference
+├── MySQL.md                # MySQL database reference
+├── Maven.md                # Maven build tool reference (Java)
+├── Nginx.md                # Nginx web server and reverse proxy reference
+├── ClaudeCode.md           # Claude Code CLI reference
+├── Makefile.md             # Makefile automation reference
+├── Markdown.md             # Markdown syntax reference (CommonMark + GFM)
+├── Mermaid.md              # Mermaid diagram reference
+├── terminal.md             # Terminal, network, SSH, and shell reference
+├── banco de dados/         # SQL studies and database queries
+│   ├── banco-dados.md      # Database notes (gitignored)
+│   └── Selects/            # SQL SELECT query examples
+│       └── relatorios.sql  # Report queries
+└── CLAUDE.md               # This file
 ```
 
 ## Content
@@ -107,6 +111,10 @@ dev-tools/
 - File/directory operations
 - SSH key generation and config
 - Environment variables, clipboard, history shortcuts
+
+**banco de dados/** — A folder for SQL studies and database work:
+- `banco-dados.md` — personal database notes (gitignored, not tracked)
+- `Selects/relatorios.sql` — SQL SELECT queries for reports
 
 ## Conventions
 
