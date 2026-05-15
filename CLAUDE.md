@@ -19,6 +19,7 @@ dev-tools/
 ├── Makefile.md             # Makefile automation reference
 ├── Markdown.md             # Markdown syntax reference (CommonMark + GFM)
 ├── Mermaid.md              # Mermaid diagram reference
+├── Pandas.md               # Pandas Python: Series, DataFrame, cleaning, groupby, merge, dates
 ├── terminal.md             # Terminal, network, SSH, and shell reference
 ├── banco de dados/         # SQL studies and database queries
 │   ├── banco-dados.md      # Database notes (gitignored)
