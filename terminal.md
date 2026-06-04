@@ -6,6 +6,17 @@ Referência de comandos úteis de terminal para desenvolvimento no macOS.
 
 ## 1. Rede
 
+
+### Portas e processos
+
+```bash
+lsof -i :8080                    # Ver o que está usando a porta 8080
+lsof -i tcp                      # Listar todas as conexões TCP abertas
+netstat -an | grep LISTEN        # Listar portas em escuta
+kill -9 $(lsof -ti :8080)        # Matar processo na porta 8080
+```
+
+
 ### Ver interfaces e IPs
 
 ```bash
@@ -30,14 +41,6 @@ traceroute google.com            # Rota até o destino
 curl -I https://google.com       # Cabeçalho HTTP de uma URL
 ```
 
-### Portas e processos
-
-```bash
-lsof -i :8080                    # Ver o que está usando a porta 8080
-lsof -i tcp                      # Listar todas as conexões TCP abertas
-netstat -an | grep LISTEN        # Listar portas em escuta
-kill -9 $(lsof -ti :8080)        # Matar processo na porta 8080
-```
 
 ---
 

@@ -23,6 +23,8 @@ dev-tools/
 ├── terminal.md             # Terminal, network, SSH, and shell reference
 ├── banco de dados/         # SQL studies and database queries
 │   ├── banco-dados.md      # Database notes (gitignored)
+│   ├── SQL-Select.md       # SELECT avançado: joins, window, CTE, UUID
+│   ├── SQL-Dicas.md        # Dicas práticas: índices, EXPLAIN, transações, performance
 │   └── Selects/            # SQL SELECT query examples
 │       └── relatorios.sql  # Report queries
 └── CLAUDE.md               # This file

@@ -11,7 +11,8 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Git.md](Git.md) | Controle de versão: branches, commits, rebase, stash, tags |
 | [Docker.md](Docker.md) | Containers: run, build, Compose, volumes, redes, limpeza |
 | [MySQL.md](MySQL.md) | Bancos de dados: conexão, CRUD, usuários, índices, backup |
-| [SQL-Select.md](SQL-Select.md) | SELECT avançado: conversões, subselects, UUID, duplicados, window functions, CTE |
+| [banco de dados/SQL-Select.md](banco%20de%20dados/SQL-Select.md) | SELECT avançado: conversões, subselects, UUID, duplicados, window functions, CTE |
+| [banco de dados/SQL-Dicas.md](banco%20de%20dados/SQL-Dicas.md) | Dicas práticas de SQL: índices, EXPLAIN, transações, performance, segurança |
 | [Nginx.md](Nginx.md) | Servidor web: proxy reverso, HTTPS, SPA, load balancer, deploy |
 | [ClaudeCode.md](ClaudeCode.md) | Claude Code CLI: comandos slash, atalhos, permissões, hooks, CLAUDE.md |
 | [Makefile.md](Makefile.md) | Automação de tarefas: regras, variáveis, dependências, exemplos Java e Node |

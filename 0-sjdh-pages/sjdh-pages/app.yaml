@@ -1,0 +1,16 @@
+runtime: python314
+env: standard
+
+automatic_scaling:
+  max_instances: 2
+
+handlers:
+  # 1. Regra específica para a página inicial (raiz /)
+  - url: /
+    static_files: www/index.html
+    upload: www/index.html
+
+  # 2. Regra geral para mapear todos os outros arquivos (css, js, imagens)
+  - url: /(.*)
+    static_files: www/\1
+    upload: www/(.*)
