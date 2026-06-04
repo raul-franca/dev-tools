@@ -25,6 +25,7 @@ dev-tools/
 │   ├── banco-dados.md      # Database notes (gitignored)
 │   ├── SQL-Select.md       # SELECT avançado: joins, window, CTE, UUID
 │   ├── SQL-Dicas.md        # Dicas práticas: índices, EXPLAIN, transações, performance
+│   ├── SQL-Funcoes-Variaveis.md  # Funções (string, número, data, condicionais) e variáveis
 │   └── Selects/            # SQL SELECT query examples
 │       └── relatorios.sql  # Report queries
 └── CLAUDE.md               # This file
@@ -118,6 +119,17 @@ dev-tools/
 **banco de dados/** — A folder for SQL studies and database work:
 - `banco-dados.md` — personal database notes (gitignored, not tracked)
 - `Selects/relatorios.sql` — SQL SELECT queries for reports
+- `SQL-Select.md` — advanced SELECT: joins, window functions, CTE, subselects, UUID, deduplication
+- `SQL-Dicas.md` — practical SQL tips: indexes, EXPLAIN, transactions, performance, security
+- `SQL-Funcoes-Variaveis.md` — A cheatsheet covering:
+  - User variables (`@var`) and local variables (`DECLARE`) in stored procedures
+  - String functions: CONCAT, TRIM, SUBSTRING, REPLACE, LPAD, LOCATE, etc.
+  - Numeric functions: ROUND, FLOOR, CEIL, ABS, MOD, RAND, GREATEST, etc.
+  - Date/time functions: NOW, DATE_FORMAT, DATE_ADD, DATEDIFF, STR_TO_DATE, etc.
+  - Conditional functions: IF, IFNULL, NULLIF, COALESCE, CASE (simple and searched)
+  - Aggregation functions: COUNT, SUM, AVG, GROUP_CONCAT, HAVING, pivot with CASE
+  - User-defined stored functions (CPF formatting, age calculation, progressive discount)
+  - Stored procedures with IN/OUT/INOUT parameters and transactions
 
 ## Conventions
 
