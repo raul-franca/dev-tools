@@ -581,6 +581,349 @@ java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart
 
 ---
 
+## Passo a Passo — GitLab CI
+
+### 1. Criar o projeto no GitLab
+
+Crie ou use um repositório existente em `gitlab.com` ou na sua instância self-hosted.
+
+### 2. Instalar e registrar um Runner
+
+```bash
+# macOS (Homebrew)
+brew install gitlab-runner
+brew services start gitlab-runner
+
+# Linux
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
+sudo apt install gitlab-runner
+```
+
+Registrar o runner no projeto:
+
+```bash
+gitlab-runner register
+```
+
+O comando vai pedir interativamente:
+
+```
+URL do GitLab:      https://gitlab.com/
+Token de registro:  (Settings > CI/CD > Runners > New project runner)
+Descrição:          meu-runner
+Tags:               docker,linux
+Executor:           docker
+Imagem padrão:      alpine:latest
+```
+
+Verificar se está ativo:
+
+```bash
+gitlab-runner list
+gitlab-runner verify
+```
+
+> Para projetos no GitLab.com, runners compartilhados já estão disponíveis — não precisa instalar um runner próprio para começar.
+
+### 3. Criar o arquivo `.gitlab-ci.yml`
+
+Na raiz do repositório, crie o arquivo:
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  image: maven:3.9-eclipse-temurin-21
+  script:
+    - mvn compile
+
+test:
+  stage: test
+  image: maven:3.9-eclipse-temurin-21
+  script:
+    - mvn test
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploy para $CI_ENVIRONMENT_NAME"
+  environment:
+    name: staging
+  only:
+    - main
+```
+
+### 4. Configurar variáveis secretas
+
+Vá em **Settings > CI/CD > Variables** e adicione:
+
+| Key | Valor | Flags |
+|---|---|---|
+| `SSH_PRIVATE_KEY` | chave privada | Protected, Masked |
+| `DB_PASSWORD` | senha do banco | Masked |
+| `DEPLOY_HOST` | IP do servidor | — |
+
+Usar no pipeline:
+
+```yaml
+script:
+  - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - ssh user@$DEPLOY_HOST "systemctl restart app"
+```
+
+### 5. Fazer push e acompanhar o pipeline
+
+```bash
+git add .gitlab-ci.yml
+git commit -m "ci: adicionar pipeline GitLab CI"
+git push origin main
+```
+
+Acompanhe em **CI/CD > Pipelines** no GitLab. Cada push dispara automaticamente.
+
+### 6. Configurar deploy por ambiente
+
+```yaml
+# Settings > Environments (criados automaticamente pelo campo environment:)
+
+deploy-staging:
+  stage: deploy
+  environment:
+    name: staging
+    url: https://staging.app.com
+  only:
+    - develop
+
+deploy-prod:
+  stage: deploy
+  environment:
+    name: production
+    url: https://app.com
+  when: manual        # requer clique manual na UI
+  only:
+    - main
+```
+
+### 7. Adicionar badge de status ao README
+
+```markdown
+[![pipeline status](https://gitlab.com/usuario/projeto/badges/main/pipeline.svg)](https://gitlab.com/usuario/projeto/-/pipelines)
+```
+
+---
+
+## Passo a Passo — Jenkins
+
+### 1. Instalar o Jenkins
+
+**Via Docker (recomendado para dev):**
+
+```bash
+docker run -d \
+  --name jenkins \
+  -p 8080:8080 -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  jenkins/jenkins:lts-jdk21
+```
+
+**Via Homebrew (macOS):**
+
+```bash
+brew install jenkins-lts
+brew services start jenkins-lts
+# Acesse: http://localhost:8080
+```
+
+**Via apt (Ubuntu/Debian):**
+
+```bash
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update && sudo apt install jenkins
+sudo systemctl start jenkins
+```
+
+### 2. Configuração inicial (Setup Wizard)
+
+```bash
+# Pegar a senha inicial
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+# ou
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+1. Acesse `http://localhost:8080`
+2. Cole a senha inicial
+3. Escolha **"Install suggested plugins"**
+4. Crie o usuário admin
+5. Confirme a URL do Jenkins
+
+### 3. Instalar plugins essenciais
+
+Vá em **Manage Jenkins > Plugins > Available plugins** e instale:
+
+| Plugin | Para que serve |
+|---|---|
+| **Git** | Integração com repositórios Git |
+| **Pipeline** | Suporte a Jenkinsfile (já incluso) |
+| **Maven Integration** | Build com Maven |
+| **Docker Pipeline** | Usar Docker no pipeline |
+| **Blue Ocean** | Interface visual de pipelines |
+| **SSH Agent** | Usar chaves SSH nos steps |
+| **Credentials Binding** | Injetar secrets nos pipelines |
+
+### 4. Configurar ferramentas (JDK e Maven)
+
+Vá em **Manage Jenkins > Tools**:
+
+**JDK:**
+- Add JDK → Nome: `JDK21` → Install automatically → `temurin-21`
+
+**Maven:**
+- Add Maven → Nome: `Maven3` → Install automatically → versão `3.9.x`
+
+Usar no Jenkinsfile:
+
+```groovy
+tools {
+    jdk 'JDK21'
+    maven 'Maven3'
+}
+```
+
+### 5. Adicionar credenciais
+
+Vá em **Manage Jenkins > Credentials > System > Global credentials > Add**:
+
+| Tipo | Uso |
+|---|---|
+| **Username with password** | DockerHub, servidor SSH |
+| **SSH Username with private key** | Deploy via SSH |
+| **Secret text** | Tokens de API, senhas |
+| **Secret file** | Arquivos de config (.env, keystore) |
+
+Referenciar no Jenkinsfile:
+
+```groovy
+environment {
+    DOCKER_CREDS = credentials('dockerhub-creds')   // user + pass
+    SSH_KEY      = credentials('deploy-ssh-key')    // chave SSH
+    API_TOKEN    = credentials('api-token')         // secret text
+}
+```
+
+### 6. Criar o job Pipeline
+
+1. **New Item** → nome do job → selecione **Pipeline** → OK
+2. Em **Build Triggers**: marque **"Poll SCM"** com `H/5 * * * *` ou configure webhook
+3. Em **Pipeline**: selecione **"Pipeline script from SCM"**
+   - SCM: Git
+   - Repository URL: `https://gitlab.com/usuario/repo.git`
+   - Credentials: selecione as credenciais cadastradas
+   - Branch: `*/main`
+   - Script Path: `Jenkinsfile`
+4. Salve
+
+### 7. Criar o Jenkinsfile no repositório
+
+```groovy
+// Jenkinsfile (raiz do repositório)
+pipeline {
+    agent any
+
+    tools {
+        jdk 'JDK21'
+        maven 'Maven3'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+
+        stage('Package') {
+            steps {
+                sh 'mvn package -DskipTests'
+            }
+        }
+
+        stage('Deploy') {
+            when { branch 'main' }
+            steps {
+                sshagent(['deploy-ssh-key']) {
+                    sh 'scp target/*.jar user@servidor:/opt/app/'
+                    sh 'ssh user@servidor "systemctl restart app"'
+                }
+            }
+        }
+    }
+
+    post {
+        success { echo "Build #${env.BUILD_NUMBER} concluído" }
+        failure { echo "Falha no build #${env.BUILD_NUMBER}" }
+    }
+}
+```
+
+```bash
+git add Jenkinsfile
+git commit -m "ci: adicionar Jenkinsfile"
+git push origin main
+```
+
+### 8. Configurar Webhook (disparo automático)
+
+No GitLab/GitHub, vá em **Settings > Webhooks > Add webhook**:
+
+```
+URL:     http://SEU_JENKINS:8080/github-webhook/
+         http://SEU_JENKINS:8080/project/NOME_DO_JOB   (GitLab)
+Trigger: Push events
+```
+
+No Jenkins, em **Build Triggers**, marque:
+- GitLab: **"Build when a change is pushed to GitLab"**
+- GitHub: **"GitHub hook trigger for GITScm polling"**
+
+### 9. Disparar o primeiro build
+
+Manualmente:
+
+1. Acesse o job no Jenkins
+2. Clique em **"Build Now"**
+3. Clique no build `#1` → **Console Output** para ver os logs
+
+Via CLI:
+
+```bash
+java -jar jenkins-cli.jar -s http://localhost:8080 \
+  -auth admin:TOKEN build NOME_DO_JOB -s -v
+```
+
+---
+
 ## Comparativo GitLab CI vs Jenkins
 
 | | GitLab CI | Jenkins |
