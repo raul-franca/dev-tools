@@ -36,7 +36,8 @@ dev-tools/
 │   ├── Nginx.md            # Nginx web server and reverse proxy reference
 │   ├── Homebrew.md         # Homebrew package manager reference
 │   ├── SSH.md              # SSH keys, config, tunneling, SCP, SFTP
-│   └── terminal.md         # Terminal, network, SSH, and shell reference
+│   ├── terminal.md         # Terminal, network, SSH, and shell reference
+│   └── CI-CD.md            # CI/CD with GitLab CI and Jenkins
 │
 ├── banco de dados/         # SQL studies and database queries
 │   ├── banco-dados.md      # Database notes (gitignored)

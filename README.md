@@ -16,6 +16,7 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Homebrew.md](backend/Homebrew.md) | Gerenciador de pacotes do macOS: instalação, serviços, ferramentas de backend |
 | [SSH.md](backend/SSH.md) | Conexão, chaves, config, tunelamento, SCP, SFTP, ProxyJump, troubleshooting |
 | [terminal.md](backend/terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
+| [CI-CD.md](backend/CI-CD.md) | CI/CD com GitLab CI e Jenkins: pipelines, stages, jobs, deploy, comparativo |
 
 ## Banco de Dados
 
