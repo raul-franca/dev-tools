@@ -1,5 +1,22 @@
 # CLAUDE.md
 
+## Regras de Commit
+
+Todos os commits devem ser escritos em **português do Brasil** e conter detalhes suficientes para entender a mudança sem precisar ler o diff:
+
+- **Título:** resumo claro e direto do que foi feito (ex: `feat: adiciona validação de env vars obrigatórias`)
+- **Corpo obrigatório:** explicar o quê, por quê e o impacto da mudança
+- **Formato:**
+  ```
+  <tipo>: <resumo em pt-br>
+
+  - O que mudou e onde
+  - Por que a mudança foi necessária
+  - Impacto ou comportamento anterior vs novo
+  ```
+- **Tipos permitidos:** `feat`, `fix`, `refactor`, `docs`, `chore`, `test`
+- Nunca usar mensagens genéricas como "ajustes", "correções", "update" sem contexto
+
 ## Project Overview
 
 This is a documentation repository containing cheatsheets for backend development on macOS. All content is written in Portuguese.
@@ -9,26 +26,42 @@ This is a documentation repository containing cheatsheets for backend developmen
 ```
 dev-tools/
 ├── README.md               # Index linking to all cheatsheets
-├── Homebrew.md             # Homebrew package manager reference
-├── Git.md                  # Git version control reference
-├── Docker.md               # Docker and Docker Compose reference
-├── MySQL.md                # MySQL database reference
-├── Maven.md                # Maven build tool reference (Java)
-├── Nginx.md                # Nginx web server and reverse proxy reference
-├── ClaudeCode.md           # Claude Code CLI reference
-├── Makefile.md             # Makefile automation reference
-├── Markdown.md             # Markdown syntax reference (CommonMark + GFM)
-├── Mermaid.md              # Mermaid diagram reference
-├── Pandas.md               # Pandas Python: Series, DataFrame, cleaning, groupby, merge, dates
-├── terminal.md             # Terminal, network, SSH, and shell reference
+├── CLAUDE.md               # This file
+│
+├── backend/                # Ferramentas de desenvolvimento backend
+│   ├── Git.md              # Git version control reference
+│   ├── Docker.md           # Docker and Docker Compose reference
+│   ├── Maven.md            # Maven build tool reference (Java)
+│   ├── Makefile.md         # Makefile automation reference
+│   ├── Nginx.md            # Nginx web server and reverse proxy reference
+│   ├── Homebrew.md         # Homebrew package manager reference
+│   ├── SSH.md              # SSH keys, config, tunneling, SCP, SFTP
+│   └── terminal.md         # Terminal, network, SSH, and shell reference
+│
 ├── banco de dados/         # SQL studies and database queries
 │   ├── banco-dados.md      # Database notes (gitignored)
+│   ├── MySQL.md            # MySQL database reference
 │   ├── SQL-Select.md       # SELECT avançado: joins, window, CTE, UUID
 │   ├── SQL-Dicas.md        # Dicas práticas: índices, EXPLAIN, transações, performance
 │   ├── SQL-Funcoes-Variaveis.md  # Funções (string, número, data, condicionais) e variáveis
 │   └── Selects/            # SQL SELECT query examples
 │       └── relatorios.sql  # Report queries
-└── CLAUDE.md               # This file
+│
+├── dados/                  # Python e análise de dados
+│   ├── Pandas.md           # Pandas Python: Series, DataFrame, cleaning, groupby, merge, dates
+│   └── Colab.md            # Google Colab + Pandas reference
+│
+├── documentacao/           # Documentação e diagramas
+│   ├── Markdown.md         # Markdown syntax reference (CommonMark + GFM)
+│   ├── Mermaid.md          # Mermaid diagram reference
+│   └── BPMN.md             # BPMN 2.0 process mapping reference
+│
+├── ia/                     # Ferramentas de IA
+│   └── ClaudeCode.md       # Claude Code CLI reference
+│
+└── projetos/               # Projetos reais e documentação de trabalho
+    ├── BI-SEAPREV.md       # Documentação BI SEAPREV
+    └── sjdh-pages/         # App Engine — site sjdh-pages
 ```
 
 ## Content
@@ -140,8 +173,8 @@ dev-tools/
 ## Common Tasks
 
 **Adding a new cheatsheet:**
-1. Create a new `.md` file in the root directory
-2. Add a link to it in `README.md`
+1. Create a new `.md` file inside the relevant folder (`backend/`, `dados/`, `documentacao/`, etc.)
+2. Add a link to it in `README.md` under the correct section
 3. Add an entry to this file under Repository Structure and Content
 
 **Editing existing docs:**
