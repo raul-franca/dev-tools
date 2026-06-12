@@ -15,17 +15,17 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Nginx.md](backend/Nginx.md) | Servidor web: proxy reverso, HTTPS, SPA, load balancer, deploy |
 | [Homebrew.md](backend/Homebrew.md) | Gerenciador de pacotes do macOS: instalação, serviços, ferramentas de backend |
 | [SSH.md](backend/SSH.md) | Conexão, chaves, config, tunelamento, SCP, SFTP, ProxyJump, troubleshooting |
-| [terminal.md](backend/terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
+| [Terminal.md](backend/Terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
 | [CI-CD.md](backend/CI-CD.md) | CI/CD com GitLab CI e Jenkins: pipelines, stages, jobs, deploy, comparativo |
 
 ## Banco de Dados
 
 | Cheatsheet | Descrição |
 |---|---|
-| [MySQL.md](banco%20de%20dados/MySQL.md) | Conexão, CRUD, usuários, índices, backup |
-| [SQL-Select.md](banco%20de%20dados/SQL-Select.md) | SELECT avançado: conversões, subselects, UUID, duplicados, window functions, CTE |
-| [SQL-Dicas.md](banco%20de%20dados/SQL-Dicas.md) | Dicas práticas de SQL: índices, EXPLAIN, transações, performance, segurança |
-| [SQL-Funcoes-Variaveis.md](banco%20de%20dados/SQL-Funcoes-Variaveis.md) | Funções e variáveis SQL: string, número, data, condicionais, agregação, stored functions |
+| [MySQL.md](banco-de-dados/MySQL.md) | Conexão, CRUD, usuários, índices, backup |
+| [SQL-Select.md](banco-de-dados/SQL-Select.md) | SELECT avançado: conversões, subselects, UUID, duplicados, window functions, CTE |
+| [SQL-Dicas.md](banco-de-dados/SQL-Dicas.md) | Dicas práticas de SQL: índices, EXPLAIN, transações, performance, segurança |
+| [SQL-Funcoes-Variaveis.md](banco-de-dados/SQL-Funcoes-Variaveis.md) | Funções e variáveis SQL: string, número, data, condicionais, agregação, stored functions |
 
 ## Dados
 

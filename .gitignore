@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Configuração local do Claude (não versionar)
+.claude/

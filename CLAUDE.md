@@ -36,10 +36,10 @@ dev-tools/
 │   ├── Nginx.md            # Nginx web server and reverse proxy reference
 │   ├── Homebrew.md         # Homebrew package manager reference
 │   ├── SSH.md              # SSH keys, config, tunneling, SCP, SFTP
-│   ├── terminal.md         # Terminal, network, SSH, and shell reference
+│   ├── Terminal.md         # Terminal, network, SSH, and shell reference
 │   └── CI-CD.md            # CI/CD with GitLab CI and Jenkins
 │
-├── banco de dados/         # SQL studies and database queries
+├── banco-de-dados/         # SQL studies and database queries
 │   ├── banco-dados.md      # Database notes (gitignored)
 │   ├── MySQL.md            # MySQL database reference
 │   ├── SQL-Select.md       # SELECT avançado: joins, window, CTE, UUID
@@ -143,14 +143,14 @@ dev-tools/
 - Mindmap and Timeline
 - Themes, node styles, and usage tips (GitHub, VS Code, CLI, playground)
 
-**terminal.md** — A cheatsheet covering:
+**Terminal.md** — A cheatsheet covering:
 - Network inspection and port management
 - Process management
 - File/directory operations
 - SSH key generation and config
 - Environment variables, clipboard, history shortcuts
 
-**banco de dados/** — A folder for SQL studies and database work:
+**banco-de-dados/** — A folder for SQL studies and database work:
 - `banco-dados.md` — personal database notes (gitignored, not tracked)
 - `Selects/relatorios.sql` — SQL SELECT queries for reports
 - `SQL-Select.md` — advanced SELECT: joins, window functions, CTE, subselects, UUID, deduplication
