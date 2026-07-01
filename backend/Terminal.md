@@ -150,6 +150,19 @@ unzip arquivo.zip                # Descompactar .zip
 unzip -l arquivo.zip             # Listar conteúdo sem extrair
 ```
 
+### RAR (instalar: `brew install rar`)
+
+```bash
+unrar x arquivo.rar              # Extrair mantendo estrutura de pastas
+unrar e arquivo.rar              # Extrair tudo no diretório atual (sem subpastas)
+unrar x arquivo.rar pasta/       # Extrair em pasta de destino específica
+unrar l arquivo.rar              # Listar conteúdo sem extrair
+unrar t arquivo.rar              # Testar integridade do arquivo
+
+rar a arquivo.rar pasta/         # Compactar pasta em .rar
+rar a -v100m arquivo.rar pasta/  # Compactar dividindo em volumes de 100MB
+```
+
 ---
 
 ## 8. Clipboard e output
