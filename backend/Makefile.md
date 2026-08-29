@@ -407,3 +407,11 @@ make -n alvo       # simulação: mostra o que seria executado, sem executar
 make -f outro.mk   # usa um Makefile com nome diferente
 make --dry-run     # mesmo que -n
 ```
+
+---
+
+## Ver também
+
+- [Docker.md](Docker.md) — comandos que costumam virar alvos do Makefile
+- [CI-CD.md](CI-CD.md) — chamar os alvos do Makefile no pipeline
+- [Maven.md](Maven.md) — builds Java automatizados pelo Makefile

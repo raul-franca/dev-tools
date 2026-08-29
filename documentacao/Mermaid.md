@@ -327,3 +327,10 @@ style A fill:#bbf,stroke:#33f
 | CLI | `npm install -g @mermaid-js/mermaid-cli` → `mmdc -i diagrama.mmd -o saida.svg` |
 | Playground | [mermaid.live](https://mermaid.live) para testar online |
 | Comentários | Use `%%` para comentários no diagrama |
+
+---
+
+## Ver também
+
+- [Markdown.md](Markdown.md) — sintaxe do arquivo que recebe os diagramas
+- [BPMN.md](BPMN.md) — quando o processo pede notação formal

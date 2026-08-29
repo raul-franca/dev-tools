@@ -436,3 +436,11 @@ chmod -R 755 /var/www/meusite.com
 | `404 Not Found` | Arquivo não encontrado / config errada | Verificar `root` e `try_files` |
 | `bind() failed` | Porta já em uso | `lsof -i :80` para ver o processo |
 | Config não aplica | Nginx não recarregado | `nginx -s reload` ou `systemctl reload nginx` |
+
+---
+
+## Ver também
+
+- [VPS-Ubuntu.md](VPS-Ubuntu.md) — instalar e operar o Nginx na VPS Ubuntu
+- [Docker.md](Docker.md) — colocar o Nginx na frente dos containers
+- [SSH.md](SSH.md) — acessar o servidor para editar as configurações

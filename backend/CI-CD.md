@@ -937,3 +937,12 @@ java -jar jenkins-cli.jar -s http://localhost:8080 \
 | **Pipelines visuais** | Nativo | Requer plugin (Blue Ocean) |
 | **Secrets** | CI/CD Variables (por projeto/grupo) | Credentials (Jenkins) |
 | **Melhor para** | Projetos no GitLab, simplicidade | Flexibilidade máxima, legado |
+
+---
+
+## Ver também
+
+- [Git.md](Git.md) — branches e tags que disparam os pipelines
+- [Docker.md](Docker.md) — build e push das imagens
+- [SSH.md](SSH.md) — chaves de deploy para o servidor
+- [VPS-Ubuntu.md](VPS-Ubuntu.md) — o servidor que recebe o deploy

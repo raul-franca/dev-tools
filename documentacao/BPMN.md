@@ -450,3 +450,10 @@ flowchart TD
 - Valide o processo com quem realmente o executa
 - Percorra o diagrama em voz alta: "primeiro acontece X, depois Y..."
 - Teste os cenários de exceção: e se der errado? e se o prazo vencer?
+
+---
+
+## Ver também
+
+- [Mermaid.md](Mermaid.md) — desenhar o fluxo direto no Markdown
+- [Markdown.md](Markdown.md) — documentar o processo por escrito

@@ -581,3 +581,11 @@ ssh-keygen -t ed25519 -f ~/.ssh/novo_servidor -N "" -C "acesso-novo-servidor"
 ssh-copy-id -i ~/.ssh/novo_servidor.pub usuario@host
 ssh -i ~/.ssh/novo_servidor usuario@host 'echo conectado com sucesso'
 ```
+
+---
+
+## Ver também
+
+- [VPS-Ubuntu.md](VPS-Ubuntu.md) — endurecer o SSH do servidor e o primeiro acesso à VPS
+- [Terminal.md](Terminal.md) — comandos de rede e diagnóstico local
+- [CI-CD.md](CI-CD.md) — deploy por SSH no pipeline

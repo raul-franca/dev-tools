@@ -84,6 +84,46 @@ grep -rl "texto" .               # Mostrar só os nomes dos arquivos com o texto
 
 ---
 
+## 4.1. Processamento de texto (sed, awk, jq)
+
+```bash
+# Visualizar
+head -20 arquivo.csv             # primeiras 20 linhas
+tail -100 app.log                # últimas 100 linhas
+tail -f app.log                  # acompanhar em tempo real
+tail -f app.log | grep ERROR     # acompanhar filtrando
+less arquivo.log                 # navegar (/busca, G fim, q sai)
+wc -l arquivo.csv                # contar linhas
+
+# Recortar colunas
+cut -d',' -f1,3 dados.csv        # colunas 1 e 3 de um CSV
+awk -F',' '{print $2}' dados.csv # coluna 2 com awk
+awk -F',' '$3 > 100 {print $1, $3}' dados.csv   # filtrar e imprimir
+
+# Substituir texto
+sed 's/antigo/novo/g' arquivo.txt          # imprime substituído (não altera o arquivo)
+sed -i '' 's/antigo/novo/g' arquivo.txt    # altera o arquivo (no macOS o '' após -i é obrigatório)
+sed -n '10,20p' arquivo.txt                # imprimir só as linhas 10 a 20
+sed '/^#/d' config.conf                    # remover linhas de comentário
+
+# Ordenar, contar e deduplicar
+sort arquivo.txt | uniq                    # remover duplicados
+sort arquivo.txt | uniq -c | sort -rn      # ranking de ocorrências
+awk '{print $1}' access.log | sort | uniq -c | sort -rn | head   # top IPs de um log
+
+# JSON com jq (brew install jq)
+jq '.' resposta.json                       # formatar
+jq '.dados[0].nome' resposta.json          # extrair campo
+jq -r '.itens[].id' resposta.json          # valores crus, um por linha
+curl -s https://api.exemplo.com | jq '.results | length'
+
+# Comparar arquivos
+diff antigo.txt novo.txt
+diff -u antigo.txt novo.txt | less         # formato unificado (igual ao git)
+```
+
+---
+
 ## 5. Variáveis de ambiente
 
 ```bash
@@ -188,3 +228,12 @@ ctrl + c                         # Cancelar comando atual
 ctrl + z                         # Suspender processo (retomar com fg)
 ctrl + l                         # Limpar tela (equivalente a clear)
 ```
+
+---
+
+## Ver também
+
+- [SSH.md](SSH.md) — chaves, config, túneis, SCP/SFTP e ProxyJump em detalhe
+- [VPS-Ubuntu.md](VPS-Ubuntu.md) — os equivalentes destes comandos no servidor Linux
+- [Git.md](Git.md) — comandos de versionamento
+- [Homebrew.md](Homebrew.md) — instalar as ferramentas citadas aqui (htop, jq, pv, rar)

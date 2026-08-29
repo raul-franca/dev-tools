@@ -840,3 +840,12 @@ FROM usuarios u
 LEFT JOIN enderecos e ON e.usuario_id = u.id
 WHERE e.id IS NULL;
 ```
+
+---
+
+## Ver também
+
+- [SQL-Dicas.md](SQL-Dicas.md) — como deixar essas consultas rápidas
+- [SQL-Funcoes-Variaveis.md](SQL-Funcoes-Variaveis.md) — funções usadas nos SELECTs
+- [MySQL.md](MySQL.md) — comandos de administração do MySQL
+- [PostgreSQL.md](PostgreSQL.md) — as diferenças de sintaxe no Postgres

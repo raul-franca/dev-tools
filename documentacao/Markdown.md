@@ -279,3 +279,10 @@ Outra nota.[^nota-longa]
 | Links | Prefira referências nomeadas para URLs longas |
 | Código | Sempre especifique a linguagem no bloco de código |
 | Alt em imagens | Sempre preencha para acessibilidade |
+
+---
+
+## Ver também
+
+- [Mermaid.md](Mermaid.md) — diagramas dentro do Markdown
+- [BPMN.md](BPMN.md) — mapas de processo

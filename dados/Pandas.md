@@ -429,3 +429,11 @@ df.memory_usage(deep=True).sum() / 1024**2  # em MB
 | Empilhar tabelas | `pd.concat([df1, df2])` |
 | Converter tipo | `df["col"].astype(tipo)` |
 | Converter data | `pd.to_datetime(df["col"])` |
+
+---
+
+## Ver também
+
+- [Colab.md](Colab.md) — o mesmo Pandas no Google Colab, com gráficos
+- [SQL-Select.md](../banco-de-dados/SQL-Select.md) — puxar os dados do banco antes de analisar
+- [PostgreSQL-Vetorial.md](../banco-de-dados/PostgreSQL-Vetorial.md) — preparar textos para gerar embeddings

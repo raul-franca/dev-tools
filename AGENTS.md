@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 ## Regras de Commit
 
@@ -26,8 +26,8 @@ This is a documentation repository containing cheatsheets for backend developmen
 ```
 dev-tools/
 ├── README.md               # Index linking to all cheatsheets
-├── CLAUDE.md               # Instruções para o Claude Code
-├── AGENTS.md               # Mesmo conteúdo do CLAUDE.md, para outros agentes de código
+├── CLAUDE.md               # Mesmo conteúdo deste arquivo, para o Claude Code
+├── AGENTS.md               # This file
 │
 ├── backend/                # Ferramentas de desenvolvimento backend
 │   ├── Git.md              # Git version control reference
@@ -62,7 +62,7 @@ dev-tools/
 │   └── BPMN.md             # BPMN 2.0 process mapping reference
 │
 ├── ia/                     # Ferramentas de IA
-│   └── ClaudeCode.md       # Claude Code CLI reference
+│   └── Codex.md       # Codex CLI reference
 │
 └── projetos/               # Projetos reais e documentação de trabalho
     ├── BI-SEAPREV.md       # Documentação BI SEAPREV
@@ -111,13 +111,13 @@ dev-tools/
 - Location routing and priority, security headers, logs
 - Step-by-step setup for macOS (dev) and Linux (production with Let's Encrypt)
 
-**ClaudeCode.md** — A cheatsheet covering:
+**Codex.md** — A cheatsheet covering:
 - CLI flags (model, effort, permissions, headless/scripting options)
 - Slash commands (session, code review, model config, automation)
 - Keyboard shortcuts
 - Permission modes
 - settings.json configuration and permission syntax
-- CLAUDE.md project instructions
+- AGENTS.md project instructions
 - Hooks (events, exit codes, examples)
 - Headless mode for scripts and CI
 - Authentication and available models
@@ -148,20 +148,6 @@ dev-tools/
 - Mindmap and Timeline
 - Themes, node styles, and usage tips (GitHub, VS Code, CLI, playground)
 
-**VPS-Ubuntu.md** — A cheatsheet covering:
-- Server reconnaissance (lsb_release, hostnamectl, resources, network)
-- First access, sudo user creation, SSH key auth and sshd hardening (24.04 uses `ssh`, not `sshd`, and socket activation for port changes)
-- APT package management, keyrings, lock troubleshooting, needrestart
-- Essential packages table and Python PEP 668 (venv/pipx instead of global pip)
-- UFW firewall + fail2ban, including the Docker-bypasses-UFW caveat
-- Docker CE + Compose v2 install from the official repo, daemon.json log limits
-- Day-to-day Docker/Compose operations, deploy via Git, disk cleanup, volume backup
-- systemd services (including a Compose-backed unit), journalctl, log rotation
-- Disk/memory/swap, processes, network and ports (ss, lsof, dig, netplan)
-- Timezone/hostname/locale, cron and systemd timers, unattended-upgrades
-- File transfer with scp/rsync, backup routine
-- Troubleshooting table (symptom → diagnosis → fix) and a 10-step bootstrap for a fresh VPS
-
 **Terminal.md** — A cheatsheet covering:
 - Network inspection and port management
 - Process management
@@ -183,6 +169,20 @@ dev-tools/
   - Aggregation functions: COUNT, SUM, AVG, GROUP_CONCAT, HAVING, pivot with CASE
   - User-defined stored functions (CPF formatting, age calculation, progressive discount)
   - Stored procedures with IN/OUT/INOUT parameters and transactions
+
+**VPS-Ubuntu.md** — A cheatsheet covering:
+- Server reconnaissance (lsb_release, hostnamectl, resources, network)
+- First access, sudo user creation, SSH key auth and sshd hardening (24.04 uses `ssh`, not `sshd`, and socket activation for port changes)
+- APT package management, keyrings, lock troubleshooting, needrestart
+- Essential packages table and Python PEP 668 (venv/pipx instead of global pip)
+- UFW firewall + fail2ban, including the Docker-bypasses-UFW caveat
+- Docker CE + Compose v2 install from the official repo, daemon.json log limits
+- Day-to-day Docker/Compose operations, deploy via Git, disk cleanup, volume backup
+- systemd services (including a Compose-backed unit), journalctl, log rotation
+- Disk/memory/swap, processes, network and ports (ss, lsof, dig, netplan)
+- Timezone/hostname/locale, cron and systemd timers, unattended-upgrades
+- File transfer with scp/rsync, backup routine
+- Troubleshooting table (symptom → diagnosis → fix) and a 10-step bootstrap for a fresh VPS
 
 **SSH.md** — A cheatsheet covering:
 - Basic connection, verbose/debug flags, remote command execution
@@ -257,3 +257,5 @@ dev-tools/
 **Editing existing docs:**
 - Edit the relevant `.md` file directly
 - Keep commands accurate and tested on macOS with the current Homebrew version
+
+## Imported Claude Cowork project instructions

@@ -17,6 +17,7 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [SSH.md](backend/SSH.md) | Conexão, chaves, config, tunelamento, SCP, SFTP, ProxyJump, troubleshooting |
 | [Terminal.md](backend/Terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
 | [CI-CD.md](backend/CI-CD.md) | CI/CD com GitLab CI e Jenkins: pipelines, stages, jobs, deploy, comparativo |
+| [VPS-Ubuntu.md](backend/VPS-Ubuntu.md) | VPS Hostinger Ubuntu 24.04 LTS: setup inicial, APT, UFW, Docker, systemd, logs, backup, troubleshooting |
 
 ## Banco de Dados
 
@@ -26,6 +27,8 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [SQL-Select.md](banco-de-dados/SQL-Select.md) | SELECT avançado: conversões, subselects, UUID, duplicados, window functions, CTE |
 | [SQL-Dicas.md](banco-de-dados/SQL-Dicas.md) | Dicas práticas de SQL: índices, EXPLAIN, transações, performance, segurança |
 | [SQL-Funcoes-Variaveis.md](banco-de-dados/SQL-Funcoes-Variaveis.md) | Funções e variáveis SQL: string, número, data, condicionais, agregação, stored functions |
+| [PostgreSQL.md](banco-de-dados/PostgreSQL.md) | psql, DDL, CRUD, JSONB, índices, EXPLAIN, VACUUM, backup, tuning e equivalências com MySQL |
+| [PostgreSQL-Vetorial.md](banco-de-dados/PostgreSQL-Vetorial.md) | pgvector: embeddings, distâncias, HNSW/IVFFlat, busca híbrida e RAG |
 
 ## Dados
 
@@ -53,4 +56,5 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | Projeto | Descrição |
 |---|---|
 | [BI-SEAPREV.md](projetos/BI-SEAPREV.md) | Documentação BI SEAPREV |
+| [ciptea_web/](projetos/ciptea_web/) | Repositório do sistema CIPTEA Web (clone independente) |
 | [sjdh-pages/](projetos/sjdh-pages/) | App Engine — site sjdh-pages |

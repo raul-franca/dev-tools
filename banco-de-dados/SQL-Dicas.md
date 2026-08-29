@@ -153,3 +153,11 @@ mysqldump -u root -p --single-transaction --quick nome_db > backup.sql
 - Documentação oficial do MySQL / PostgreSQL
 - Artigos sobre EXPLAIN e otimização de queries
 - Ferramentas: pt-query-digest, pgBadger, Percona Toolkit
+
+---
+
+## Ver também
+
+- [SQL-Select.md](SQL-Select.md) — as consultas que essas dicas otimizam
+- [MySQL.md](MySQL.md) — índices, transações e backup no MySQL
+- [PostgreSQL.md](PostgreSQL.md) — EXPLAIN, VACUUM e tuning no Postgres

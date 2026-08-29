@@ -331,3 +331,11 @@ CLAUDE.md                       # Instruções do projeto (versionado)
 claude --model opus "Analisa a arquitetura do projeto"
 claude --model haiku "Explica essa função"
 ```
+
+---
+
+## Ver também
+
+- [CLAUDE.md](../CLAUDE.md) — as instruções deste repositório
+- [Git.md](../backend/Git.md) — commits e branches gerados nas sessões
+- [Terminal.md](../backend/Terminal.md) — comandos de shell usados nas sessões

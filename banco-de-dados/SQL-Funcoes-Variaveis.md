@@ -436,3 +436,11 @@ SELECT @resultado;
 | Condicional | `CASE WHEN ... END`           | If/else em SQL                     |
 | Agregação   | `COUNT` / `SUM` / `AVG`       | Contagem, soma, média              |
 | Agregação   | `GROUP_CONCAT(...)`           | Concatena valores do grupo         |
+
+---
+
+## Ver também
+
+- [SQL-Select.md](SQL-Select.md) — onde essas funções aparecem na prática
+- [MySQL.md](MySQL.md) — administração do banco
+- [PostgreSQL.md](PostgreSQL.md) — equivalentes no Postgres (`string_agg`, `to_char`, PL/pgSQL)

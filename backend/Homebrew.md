@@ -287,3 +287,11 @@ brew install helm
 brew services start postgresql
 brew services start redis
 ```
+
+---
+
+## Ver também
+
+- [Terminal.md](Terminal.md) — comandos de terminal no macOS
+- [Docker.md](Docker.md) — usar as imagens em vez de instalar serviços localmente
+- [VPS-Ubuntu.md](VPS-Ubuntu.md) — o equivalente ao Homebrew no servidor: APT

@@ -364,3 +364,11 @@ mvn install --fail-at-end
 | `Tests run: X, Failures: Y` | Teste falhando | Rodar `mvn test -Dtest=ClasseTest` para isolar |
 | `BUILD FAILURE` sem mensagem clara | Erro silencioso | Adicionar `-e` ou `-X` para ver detalhes |
 | `Artifact ... not found` no CI | Cache desatualizado | Rodar com `-U` para forçar atualização |
+
+---
+
+## Ver também
+
+- [Makefile.md](Makefile.md) — encurtar os comandos do Maven
+- [CI-CD.md](CI-CD.md) — build e testes de Java no pipeline
+- [Docker.md](Docker.md) — empacotar o .jar em imagem

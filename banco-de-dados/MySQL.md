@@ -273,3 +273,12 @@ KILL id_do_processo;
 | `TIMESTAMP` | Data e hora com fuso automático |
 | `JSON` | Objetos JSON (MySQL 5.7+) |
 | `ENUM('a','b')` | Valor de uma lista fixa |
+
+---
+
+## Ver também
+
+- [SQL-Select.md](SQL-Select.md) — SELECT avançado, joins, CTE e window functions
+- [SQL-Dicas.md](SQL-Dicas.md) — índices, EXPLAIN, transações e performance
+- [SQL-Funcoes-Variaveis.md](SQL-Funcoes-Variaveis.md) — funções, variáveis, stored procedures
+- [PostgreSQL.md](PostgreSQL.md) — o equivalente para PostgreSQL, com tabela de equivalências

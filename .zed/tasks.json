@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Rodar linha do cursor",
+    "command": "zsh -c \"$(sed -n \"${ZED_ROW}p\" \"$ZED_FILE\")\"",
+    "save": "current",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Rodar bloco de código",
+    "command": "se=$(awk -v r=$ZED_ROW '/^[[:space:]]*```/{ if (NR<=r) s=NR; else { print s+1, NR-1; exit } }' \"$ZED_FILE\"); [ -n \"$se\" ] && zsh -c \"$(sed -n \"${se%% *},${se##* }p\" \"$ZED_FILE\")\" || echo '>> Cursor fora de um bloco de código'",
+    "tags": ["bash-script"],
+    "save": "current",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Rodar seleção no terminal",
+    "command": "$ZED_SELECTED_TEXT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  }
+]

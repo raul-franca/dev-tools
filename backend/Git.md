@@ -178,3 +178,12 @@ git push -u origin feature/minha-feature
 
 # 6. Abrir Pull Request na plataforma (GitHub, GitLab, etc.)
 ```
+
+---
+
+## Ver também
+
+- [Terminal.md](Terminal.md) — comandos de shell usados junto com o Git no dia a dia
+- [CI-CD.md](CI-CD.md) — o que acontece com seus commits no pipeline
+- [CLAUDE.md](../CLAUDE.md) — as regras de mensagem de commit deste repositório
+- [SSH.md](SSH.md) — chaves para autenticar no GitHub/GitLab

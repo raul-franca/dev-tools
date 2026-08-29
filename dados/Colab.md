@@ -574,3 +574,10 @@ df = pd.read_excel('arquivo.xlsx', sheet_name='Planilha1')
 import pandas as pd
 print(pd.__version__)
 ```
+
+---
+
+## Ver também
+
+- [Pandas.md](Pandas.md) — referência completa do Pandas
+- [SQL-Select.md](../banco-de-dados/SQL-Select.md) — consultas para gerar os CSVs
