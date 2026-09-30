@@ -37,6 +37,7 @@ dev-tools/
 │   ├── Nginx.md            # Nginx web server and reverse proxy reference
 │   ├── Homebrew.md         # Homebrew package manager reference
 │   ├── SSH.md              # SSH keys, config, tunneling, SCP, SFTP
+│   ├── Curl.md             # curl: HTTP requests, JSON, upload, auth, TLS, scripts
 │   ├── Terminal.md         # Terminal, network, text processing, SSH, and shell reference
 │   ├── CI-CD.md            # CI/CD with GitLab CI and Jenkins
 │   └── VPS-Ubuntu.md       # Hostinger VPS on Ubuntu 24.04 LTS: setup, apt, ufw, Docker, systemd
@@ -62,7 +63,8 @@ dev-tools/
 │   └── BPMN.md             # BPMN 2.0 process mapping reference
 │
 ├── ia/                     # Ferramentas de IA
-│   └── ClaudeCode.md       # Claude Code CLI reference
+│   ├── ClaudeCode.md       # Claude Code CLI reference
+│   └── CodebaseMemory.md   # codebase-memory-mcp: grafo e análise estrutural de código
 │
 └── projetos/               # Projetos reais e documentação de trabalho
     ├── BI-SEAPREV.md       # Documentação BI SEAPREV
@@ -122,6 +124,12 @@ dev-tools/
 - Headless mode for scripts and CI
 - Authentication and available models
 
+**CodebaseMemory.md** — A cheatsheet covering:
+- Como o codebase-memory-mcp indexa o repositório e constrói o grafo de código
+- Integração MCP com Codex e comandos gerais do executável
+- Indexação, status, buscas estruturais, traces, arquitetura e impacto
+- Consultas Cypher-like, cobertura do índice, paginação e troubleshooting
+
 **Makefile.md** — A cheatsheet covering:
 - Rule structure (targets, dependencies, commands)
 - .PHONY targets, variables (=, :=, ?=), shell execution
@@ -161,6 +169,14 @@ dev-tools/
 - Timezone/hostname/locale, cron and systemd timers, unattended-upgrades
 - File transfer with scp/rsync, backup routine
 - Troubleshooting table (symptom → diagnosis → fix) and a 10-step bootstrap for a fresh VPS
+
+**Curl.md** — A cheatsheet covering:
+- Basic requests, flags, HTTP methods, headers, query strings and globbing
+- Sending JSON, form data and multipart uploads; `--data-binary` vs `-d`
+- Authentication (Basic, Bearer, API key, .netrc), cookies and sessions
+- Downloads (resume, rate limit), redirects, proxy, TLS/mTLS, `--resolve`
+- Timing/status metrics with `-w`, retry, exit codes and health-check scripts
+- JSON with `jq`, other protocols (FTP/SFTP/SMTP), practical recipes and troubleshooting table
 
 **Terminal.md** — A cheatsheet covering:
 - Network inspection and port management

@@ -15,6 +15,7 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | [Nginx.md](backend/Nginx.md) | Servidor web: proxy reverso, HTTPS, SPA, load balancer, deploy |
 | [Homebrew.md](backend/Homebrew.md) | Gerenciador de pacotes do macOS: instalação, serviços, ferramentas de backend |
 | [SSH.md](backend/SSH.md) | Conexão, chaves, config, tunelamento, SCP, SFTP, ProxyJump, troubleshooting |
+| [Curl.md](backend/Curl.md) | Requisições HTTP: métodos, JSON, upload, auth, cookies, TLS, métricas, scripts, troubleshooting |
 | [Terminal.md](backend/Terminal.md) | Rede, processos, SSH, arquivos, variáveis de ambiente |
 | [CI-CD.md](backend/CI-CD.md) | CI/CD com GitLab CI e Jenkins: pipelines, stages, jobs, deploy, comparativo |
 | [VPS-Ubuntu.md](backend/VPS-Ubuntu.md) | VPS Hostinger Ubuntu 24.04 LTS: setup inicial, APT, UFW, Docker, systemd, logs, backup, troubleshooting |
@@ -50,6 +51,7 @@ Referências rápidas de comandos para desenvolvimento backend no macOS. Conteú
 | Cheatsheet | Descrição |
 |---|---|
 | [ClaudeCode.md](ia/ClaudeCode.md) | Claude Code CLI: comandos slash, atalhos, permissões, hooks, CLAUDE.md |
+| [CodebaseMemory.md](ia/CodebaseMemory.md) | codebase-memory-mcp: indexação, grafo de código, buscas estruturais, traces e impacto |
 
 ## Projetos
 
