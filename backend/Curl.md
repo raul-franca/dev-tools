@@ -20,6 +20,7 @@ curl -L http://exemplo.com                   # segue redirecionamentos (301/302)
 curl -m 10 https://api.exemplo.com           # timeout total de 10 s
 curl --connect-timeout 5 https://exemplo.com # timeout só da conexão
 ```
+curl -sS  https://api.sjdh.pe.gov.br/api-portal/docs\#/ | jq
 
 ### Flags mais usadas
 
