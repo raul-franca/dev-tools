@@ -3,3 +3,9 @@
 
 # Configuração local do Claude (não versionar)
 .claude/
+
+# Repositório git aninhado (projeto com .git próprio)
+projetos/ciptea_web/
+
+# Rascunho local com caminho de credenciais
+chat.md
